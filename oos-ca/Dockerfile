@@ -19,4 +19,13 @@ RUN yarn global add serve
 
 CMD serve -s build
 
+FROM cypress/included:3.2.0
+#COPY /etc/hosts /etc/
+WORKDIR /e2e
+COPY package*.json ./
+RUN npm install --production
+COPY . .
+
+ENTRYPOINT sleep 10; npm run cypress
+
 EXPOSE 5000

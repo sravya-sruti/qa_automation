@@ -26,5 +26,5 @@ export const crewMemberState = {
 
     clickOnDownButton: () => {
         cy.get(down_button).click();
-    },
+    }
 };

@@ -8,9 +8,9 @@ context('Crew Aplication', () => {
   
     it('View a crew member in applied state', () => {
         filterCrewMembers.removeTextFromNameAndCity();
-        filterCrewMembers.filterByName("lloyd")
+        filterCrewMembers.filterByName("lloyd");
         filterCrewMembers.clickOnSubmitButton();
-        filterCrewMembers.filteredMemberIsDisplayed("lloyd gonzalez")
+        filterCrewMembers.filteredMemberIsDisplayed("lloyd gonzalez");
         crewMemberState.checkUserInAppliedState("lloyd gonzalez");
    });
 
@@ -35,6 +35,6 @@ context('Crew Aplication', () => {
     it('Crew Member in interviewing state moves back to to applied state', () => {
         crewMemberState.checkUserInterviewingState("lloyd gonzalez");
         crewMemberState.clickOnDownButton();
-        crewMemberState.checkUserInAppliedState("lloyd gonzalez")
+        crewMemberState.checkUserInAppliedState("lloyd gonzalez");
     });
 });

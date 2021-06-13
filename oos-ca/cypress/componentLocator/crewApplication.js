@@ -21,6 +21,5 @@ export const crewApplication = {
 
   crewMemberPhotoIsPresent: () => {
     cy.get(crewmember_photo).should('be.visible');
-  },
-
+  }
 };

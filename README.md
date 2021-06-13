@@ -1,43 +1,49 @@
-# QA automation assignment
+## CREW APPLICATION Cypress Tests
 
-## Time limits
+A guide to run the Crew Application Cypress tests
 
-The evaluation result of the test is not linked to how much time you spend on it.
+## Cypress Installation
 
-This assignment is meant to evaluate the QA Automation proficiency of full-time engineers.
-
-**Do not mention 90 percent of everything or 90poe anywhere on the code or repository name.**
-
-**Do not copy any files from this repository**
-
-## Evaluation points in order of importance
-
-- correctly defined test cases in BDD format
-- readiness for CI
-- edge cases are covered by tests
-- correct error messages
-- documentation: README and inline code comments
-- use of docker
+Command to install Cypress using npm using  `npm install cypress --save-dev`
+or
+Command to install Cypress using yarn `yarn add cypress --dev`
 
 
-Results: please share a git repository with us containing your implementation.
+## Getting started
 
-Level of experience targeted: EXPERT
+Clone the repo and run `yarn` to install the dependencies. 
+`git clone`
 
-Choose any automation tool. Cypress is a big plus.
 
-If you have questions please make some assumptions and collect in writing your interpretations.
+## Project Details
 
-Good luck.
+1) Added data_cy's in the source code and used them in the tests.
+2) For reusability all the elements are maintainee under cypress->componentLocator folder.
+3) The actual tests are maintained under cypress->integration folder.
+4) Docker file and docker-compose file are added at root folder of the repo.
 
-## Technical test
 
-Given an application(oos_ca). Run it using the instructions in README.md. Observe the application functionality, assuming that it works correctly.
-Create automation framework that will make sure that behavior stays consistent in future versions.
-Create documentation on how to work with your test framework.
-Have at least two test suites.
+## Intergration Tests
+   
+ ### Running tests locally
+ 
+ Make sure you change the URL in specs "http://localhost:3000/"
+ 1) In command prompt from the project folder type `yarn cypress open` and run the specs.
 
-## Bonus points
+ 
+ ### Running tests using docker
 
-- Use Docker for tests
-- Measure performance of different UI operations
+Make sure you change the URL in specs "http://crew-app:5000/"
+ 1) Go to repo root folder "oos-ca" 
+ 2) Run the following command `docker run crew-app`
+ 3) Make sure the docker image crew-app is in docker images list `docker images ls`
+ 4) Run the command `docker-compose up integration_tests`
+ 5) You can see the test output in the console
+ Note: Added images and integration tests output videos as proof of execution of the tests in docker.
+
+
+ ## Bugs found
+
+1) When user clicks on clear button the text boxes (Name and City) are not cleared.
+2) Crew member in moved state should not be moved to interviewing state.
+Note: Naming convention of filter is confusing as user thinks is submitting crew member to applied state

@@ -24,7 +24,7 @@ context('Filter Crew Members', () => {
     filterCrewMembers.removeTextFromNameAndCity();
     filterCrewMembers.filterByName("emma");
     filterCrewMembers.filterByCity("liverpool");
-    filterCrewMembers.clickOnSubmitButton();;
+    filterCrewMembers.clickOnSubmitButton();
     filterCrewMembers.filteredMemberDoesnotExist();
   });
 
@@ -32,5 +32,4 @@ context('Filter Crew Members', () => {
     filterCrewMembers.clickOnClearButton();
     filterCrewMembers.crewMembersAreDisplayed();
   });
-
 });
