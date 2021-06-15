@@ -28,6 +28,7 @@ Clone the repo and run `yarn` to install the dependencies.
  ### Running tests locally
  
  Make sure you change the URL in specs "http://localhost:3000/"
+ Run `yarn install` and `yarn start`
  1) In command prompt from the project folder type `yarn cypress open` and run the specs.
 
  
